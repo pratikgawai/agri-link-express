@@ -10,6 +10,7 @@ const LINKS = [
   { label: "Impact", href: "#impact" },
   { label: "Features", href: "#features" },
   { label: "Contact", href: "#contact" },
+  { label: "Survey", href: "#survey" },
 ];
 
 export default function Navbar() {
