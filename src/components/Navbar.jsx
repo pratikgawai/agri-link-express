@@ -52,10 +52,10 @@ export default function Navbar() {
           aria-label="Agri Link Express Home"
         >
           <span className="navbar-logo infination-logo">
-            <img
-              src="/images/infination-logo.png"
-              alt="Infination"
-            />
+<img
+  src={`${import.meta.env.BASE_URL}images/infination-logo.png`}
+  alt="Infination"
+/>
           </span>
 
           <span className="navbar-brand-copy">
