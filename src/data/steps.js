@@ -1,0 +1,51 @@
+export const steps = [
+  {
+    id: 1,
+    title: "Registration",
+    desc: "Farmers list produce, quantity, location & availability. Buyers post requirements.",
+    tone: "green",
+    icon: "user-plus",
+  },
+  {
+    id: 2,
+    title: "Demand-Based Smart Aggregation",
+    desc: "AI finds nearby suitable farmers based on quantity, quality, distance & availability.",
+    tone: "green",
+    icon: "network",
+  },
+  {
+    id: 3,
+    title: "Pre-collection Price Transparency",
+    desc: "Farmers get estimated minimum payout before collection. Excludes transport, handling, platform & other charges.",
+    tone: "gold",
+    icon: "receipt",
+  },
+  {
+    id: 4,
+    title: "Smart Collection & Verification",
+    desc: "Produce is collected and digitally verified at source. AI-based route optimization ensures efficient delivery.",
+    tone: "green",
+    icon: "truck-check",
+  },
+  {
+    id: 5,
+    title: "Privacy-Protected Tracking",
+    desc: "Real-time status updates. Buyer & destination details hidden to protect privacy.",
+    tone: "blue",
+    icon: "shield-lock",
+  },
+  {
+    id: 6,
+    title: "Delivery & Digital Billing",
+    desc: "Digital bill generated after delivery. All charges deducted as per platform policy.",
+    tone: "gold",
+    icon: "bill",
+  },
+  {
+    id: 7,
+    title: "Farmer Settlement",
+    desc: "Based on actual quantity, quality & charges. Payment to farmers within 48 hours.",
+    tone: "green",
+    icon: "wallet",
+  },
+];

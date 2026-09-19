@@ -1,0 +1,53 @@
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-copy {
+    order: 1;
+  }
+  .hero-visual {
+    order: 2;
+  }
+  .nav-links {
+    display: none !important;
+  }
+  .menu-toggle {
+    display: inline-flex !important;
+  }
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .dual-cta-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .aicore-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .aicore-hub {
+    order: -1;
+    margin: 0 auto 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .steps-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .problem-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .badges-row {
+    flex-wrap: wrap;
+    row-gap: 0.75rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+}

@@ -1,0 +1,578 @@
+/* =========================================================
+   AGRI LINK EXPRESS — PREMIUM NAVBAR
+========================================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border-bottom: 1px solid rgba(15, 59, 40, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.97);
+
+  border-bottom-color: rgba(15, 59, 40, 0.12);
+
+  box-shadow:
+    0 8px 30px rgba(15, 59, 40, 0.08);
+}
+
+
+/* =========================================================
+   MAIN NAVBAR
+========================================================= */
+
+.navbar-inner {
+  width: min(100% - 48px, 1380px);
+
+  min-height: 82px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 28px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.navbar-brand {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--forest-900);
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   INFINATION LOGO
+========================================================= */
+
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: transparent;
+
+  border-radius: 0;
+
+  box-shadow: none;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+
+/*
+   Your uploaded logo:
+   - Black background
+   - White logo
+
+   filter invert():
+   - Black → White
+   - White → Black
+
+   mix-blend-mode:multiply:
+   - White background visually disappears
+   - Black logo remains
+*/
+
+.infination-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+  filter: invert(1);
+
+  mix-blend-mode: multiply;
+
+  transform: scale(1.05);
+}
+
+
+.navbar-brand:hover .navbar-logo {
+  transform: translateY(-2px) scale(1.03);
+}
+
+
+/* =========================================================
+   BRAND TEXT
+========================================================= */
+
+.navbar-brand-copy {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+.navbar-brand-name {
+  font-family: var(--font-display);
+
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+
+  font-weight: 700;
+
+  letter-spacing: -0.025em;
+
+  color: var(--forest-900);
+}
+
+.navbar-brand-tagline {
+  margin-top: 6px;
+
+  font-size: 0.59rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+
+  color: var(--gold-600);
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+
+  gap: clamp(1.1rem, 2vw, 2rem);
+
+  margin-left: auto;
+}
+
+.navbar-link {
+  position: relative;
+
+  padding: 8px 0;
+
+  color: var(--ink-700);
+
+  font-size: 0.88rem;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: var(--gold-500);
+
+  transform: translateX(-50%);
+
+  transition: width 0.25s ease;
+}
+
+.navbar-link:hover {
+  color: var(--forest-900);
+
+  transform: translateY(-1px);
+}
+
+.navbar-link:hover::after {
+  width: 20px;
+}
+
+
+/* =========================================================
+   RIGHT ACTIONS
+========================================================= */
+
+.navbar-actions {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
+
+/* =========================================================
+   SIH BADGE
+========================================================= */
+
+.sih-badge {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding-right: 16px;
+
+  border-right: 1px solid rgba(15, 59, 40, 0.12);
+}
+
+.sih-mark {
+  position: relative;
+
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(15, 59, 40, 0.05);
+}
+
+.sih-mark span:first-child {
+  width: 50%;
+  height: 100%;
+
+  background: var(--gold-500);
+}
+
+.sih-mark span:last-child {
+  width: 50%;
+  height: 100%;
+
+  background: var(--forest-700);
+}
+
+.sih-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+
+  color: var(--ink-700);
+
+  font-size: 0.62rem;
+
+  line-height: 1.05;
+
+  letter-spacing: 0.015em;
+}
+
+.sih-text strong {
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   DESKTOP CTA
+========================================================= */
+
+.navbar-desktop-cta {
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.navbar-menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(15, 59, 40, 0.1);
+
+  border-radius: 12px;
+
+  background: rgba(15, 59, 40, 0.04);
+
+  color: var(--forest-900);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar-menu-button:hover {
+  background: rgba(15, 59, 40, 0.08);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1120px) {
+
+  .navbar-inner {
+    width: min(100% - 36px, 1380px);
+
+    gap: 18px;
+  }
+
+  .navbar-links {
+    gap: 1.1rem;
+  }
+
+  .navbar-link {
+    font-size: 0.82rem;
+  }
+
+  .sih-badge {
+    padding-right: 10px;
+  }
+
+  .sih-text {
+    font-size: 0.56rem;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar-inner {
+    min-height: 72px;
+
+    width: min(100% - 30px, 1380px);
+  }
+
+  .navbar-links,
+  .navbar-desktop-cta,
+  .sih-badge {
+    display: none;
+  }
+
+  .navbar-menu-button {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: block;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    border-top: 1px solid transparent;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    transition:
+      max-height 0.4s ease,
+      opacity 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .mobile-menu-open {
+    max-height: 600px;
+
+    opacity: 1;
+
+    border-top-color: rgba(15, 59, 40, 0.08);
+  }
+
+  .mobile-menu-links {
+    padding: 12px 20px 4px;
+  }
+
+  .mobile-menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 4px;
+
+    color: var(--ink-700);
+
+    border-bottom: 1px solid rgba(15, 59, 40, 0.07);
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    opacity: 0;
+
+    transform: translateY(-6px);
+
+    transition:
+      color 0.2s ease,
+      opacity 0.3s ease var(--delay),
+      transform 0.3s ease var(--delay);
+  }
+
+  .mobile-menu-open .mobile-menu-link {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+  .mobile-menu-link:hover {
+    color: var(--forest-800);
+  }
+
+  .mobile-menu-cta {
+    padding: 18px 20px 10px;
+  }
+
+  .mobile-menu-cta > * {
+    width: 100%;
+  }
+
+  .mobile-sih {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 14px 20px 20px;
+
+    color: var(--ink-700);
+
+    font-size: 0.66rem;
+
+    font-weight: 750;
+
+    letter-spacing: 0.02em;
+  }
+
+  .mobile-sih .sih-mark {
+    width: 27px;
+    height: 27px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .navbar-inner {
+    width: calc(100% - 24px);
+  }
+
+  .navbar-logo {
+    width: 43px;
+    height: 43px;
+  }
+
+  .infination-logo img {
+    transform: scale(1.03);
+  }
+
+  .navbar-brand-name {
+    font-size: 0.95rem;
+  }
+
+  .navbar-brand-tagline {
+    font-size: 0.52rem;
+
+    letter-spacing: 0.11em;
+  }
+
+  .navbar-menu-button {
+    width: 40px;
+    height: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .navbar,
+  .navbar-logo,
+  .navbar-link,
+  .navbar-link::after,
+  .navbar-menu-button,
+  .mobile-menu,
+  .mobile-menu-link {
+    transition: none !important;
+  }
+
+}
